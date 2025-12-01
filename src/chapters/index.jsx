@@ -20,6 +20,12 @@ import {tests as t2} from "./example_module_2/tests_2.js";
 
 const moduleOneId = nav[0].id;
 const moduleTwoId = nav[1].id;
+const moduleThreeId = nav[2].id;
+const moduleFourId = nav[3].id;
+const moduleFiveId = nav[4].id;
+const moduleSixId = nav[5].id;
+const moduleSevenId = nav[6].id;
+
 
 export const chapters = [
   {
