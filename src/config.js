@@ -4,7 +4,7 @@ const config = {
   baseUrl: import.meta.env.BASE_URL,
   learningPlatformApi:
     import.meta.env.VITE_LEARNING_PLATFORM_API,
-  courseName: "Introduction to OZ",
+  courseName: "Intro to Cloud Part2",
   doAuth: false,
 };
 
