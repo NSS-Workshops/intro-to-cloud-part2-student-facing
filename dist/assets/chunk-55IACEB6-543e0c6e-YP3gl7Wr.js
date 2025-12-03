@@ -1,1 +1,0 @@
-import{e as r,p as e}from"./index-Czor8CTe.js";var d=r((o,n)=>{let t;return n==="sandbox"&&(t=e("#i"+o)),(n==="sandbox"?e(t.nodes()[0].contentDocument.body):e("body")).select(`[id="${o}"]`)},"getDiagramElement");export{d as g};
