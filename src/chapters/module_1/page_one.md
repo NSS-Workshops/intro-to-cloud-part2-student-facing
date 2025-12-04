@@ -1,6 +1,13 @@
 
 
-# Page 1: Lorem Ipsum Dolor Sit Amet
+# Page 1: Terraform Setup & Core Concepts
+
+
+## Session Goals
+- Introduce Infrastructure as Code (IaC) concepts
+- Install and configure Terraform
+- Create and deploy a basic AWS resource
+- Understand Terraform’s workflow (init → plan → apply)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
