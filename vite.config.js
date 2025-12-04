@@ -67,7 +67,8 @@ export default defineConfig(({ mode }) => {
             // eslint-disable-next-line no-undef
             src: normalizePath(path.resolve(__dirname, 'src/chapters/**/*.{png,jpg,jpeg,svg,gif,webp,avif}')),
             dest: 'assets',
-            flatten: false
+            flatten: false,
+            errorOnMissing: false
           }
         ]
       })
