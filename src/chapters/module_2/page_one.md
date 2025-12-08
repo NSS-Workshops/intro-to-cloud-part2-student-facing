@@ -1,4 +1,12 @@
-# Page 3: Cursus Ridiculus Vulputate
+# Page 3: Variables, Outputs, AWS Auth, and Terraform State
+
+
+## Session Goals
+- Add structure to Terraform configurations
+- Learn variables, outputs, and .tfvars
+- Understand AWS authentication methods
+- Explore Terraform state and why it matters
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
 

@@ -237,7 +237,7 @@ Understanding when to use `?raw` vs module imports:
 ## Example Module Structure
 
 ```
-src/chapters/example_module_1/
+src/chapters/module_1/
 ├── page_one.md              # Lesson content
 ├── page_two.md              # Additional content  
 ├── exercise_1.js            # Student starter code
