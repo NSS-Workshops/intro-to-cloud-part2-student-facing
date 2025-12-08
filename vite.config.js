@@ -44,13 +44,7 @@ export default defineConfig(({ mode }) => {
   // If BASE_URL is provided (e.g., by GitHub Actions), use it. Otherwise, use courseUrl.
   // This is crucial for PR previews where assets are hosted under a /pr-XX/ path.
   const deployBasePath = env.BASE_URL ? `/${env.BASE_URL}/` : `/${courseUrl}/`;
-  
-  console.log(`[DEBUG] Vite Configuration:`);
-  console.log(`[DEBUG]   mode: ${mode}`);
-  console.log(`[DEBUG]   env.BASE_URL: ${env.BASE_URL}`);
-  console.log(`[DEBUG]   courseName (from config.js): ${courseName}`);
-  console.log(`[DEBUG]   courseUrl (derived): ${courseUrl}`);
-  console.log(`[DEBUG]   Resolved deployBasePath: ${deployBasePath}`);
+
 
   // Custom plugin to replace placeholders in HTML
   const htmlReplacementPlugin = {
