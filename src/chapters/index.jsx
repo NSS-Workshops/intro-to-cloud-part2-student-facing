@@ -3,14 +3,10 @@ import { Checkpoint } from '@nss-workshops/nss-core';
 
 
 import {nav} from "./nav.js";
-
-// Module One Imports
-import moduleOnePageOne from "./module_1/page_one.md?raw";
-import moduleOnePageTwo from "./module_1/page_two.md?raw";
-import ExcerciseOne from "./module_1/exercise_1.js?raw";
-import SolutionOne from "./module_1/solution_one.js?raw";
-import {questions as questions} from "./module_1/questions_1.jsx";
-import {tests as t1} from "./module_1/tests_1.js";
+// Terraform Chapters
+import TerraformPageOne from "./Terraform/terraform-fundamentals.md?raw";
+import TerraformPageTwo from "./Terraform/terraform-setup.md?raw";
+import {questions as questions} from "./Terraform/questions_1.jsx";
 
 // Module Two Imports
 import moduleTwoPageOne from "./module_2/page_one.md?raw";
@@ -47,15 +43,10 @@ const moduleSevenId = nav[6].id;
 export const chapters = [
   {
     id: moduleOneId + "-page-1",
-    title: 'Terraform Setup & Core Concepts',
+    title: 'Terraform Fundamentals',
     sectionId: moduleOneId,
     previousChapterId: null,
-    content: moduleOnePageOne,
-    exercise: {
-      starterCode:ExcerciseOne,
-      solution:SolutionOne,
-      tests: t1
-    },
+    content: TerraformPageOne,
     quiz: {component: () => <>
        <h1>Checkpoint</h1>
        <Checkpoint questions={questions}/>
@@ -64,10 +55,10 @@ export const chapters = [
   },
   {
     id: moduleOneId + "-page-2",
-    title: 'Terraform Setup & Core Concepts Continued',
+    title: 'My First Terraform Project',
     sectionId: moduleOneId,
     previousChapterId:  moduleOneId + "-page-1",
-    content: moduleOnePageTwo,
+    content: TerraformPageTwo,
     exercise: null
   },
   {
