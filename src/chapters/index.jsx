@@ -6,6 +6,8 @@ import {nav} from "./nav.js";
 // Terraform Chapters
 import TerraformPageOne from "./Terraform/terraform-fundamentals.md?raw";
 import TerraformPageTwo from "./Terraform/terraform-setup.md?raw";
+import TerraformPageThree from "./Terraform/terraform-expanded.md?raw"
+import TerraformPageFour from "./Terraform/client-side-setup.md?raw"
 import {questions as questions} from "./Terraform/questions_1.jsx";
 
 // Module Two Imports
@@ -58,8 +60,21 @@ export const chapters = [
     title: 'My First Terraform Project',
     sectionId: moduleOneId,
     previousChapterId:  moduleOneId + "-page-1",
-    content: TerraformPageTwo,
-    exercise: null
+    content: TerraformPageTwo
+  },
+    {
+    id: moduleOneId + "-page-3",
+    title: 'Terraform Expanded',
+    sectionId: moduleOneId,
+    previousChapterId: moduleOneId + "-page-2",
+    content: TerraformPageThree
+  },
+  {
+    id: moduleOneId + "-page-4",
+    title: 'Rock of Ages Client Side Infrastructure Setup',
+    sectionId: moduleOneId,
+    previousChapterId:  moduleOneId + "-page-3",
+    content: TerraformPageFour
   },
   {
     id: moduleTwoId + "-page-1",
