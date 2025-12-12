@@ -150,7 +150,7 @@ Now let's create a minimal Terraform project.
 5.  **Verify Resource Creation:**
     You can check in the AWS Management Console or via the AWS CLI:
     ```bash
-    aws s3 ls --profile default
+    aws s3 ls 
     ```
     You should see your new S3 bucket listed.
 
