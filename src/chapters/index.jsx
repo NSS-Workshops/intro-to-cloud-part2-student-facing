@@ -8,12 +8,10 @@ import TerraformPageOne from "./Terraform/terraform-fundamentals.md?raw";
 import TerraformPageTwo from "./Terraform/terraform-setup.md?raw";
 import {questions as questions} from "./Terraform/questions_1.jsx";
 
-// Module Two Imports
-import moduleTwoPageOne from "./module_2/page_one.md?raw";
-import moduleTwoPageTwo from "./module_2/page_two.md?raw";
-import excerciseTwo from "./module_2/excersize_2.js?raw";
-import solutionTwo from "./module_2/solution_2.js?raw";
-import {tests as t2} from "./module_2/tests_2.js";
+// IAM Chapters 
+import IamPageOne from "./IAM/page_one.md?raw";
+import IamPageTwo from "./IAM/page_two.md?raw";
+import { Iamquestions as Iamquestions } from './IAM/questions_1.jsx';
 
 // Module Three Imports
 import moduleThreePageOne from "./module_3/page_one.md?raw";
@@ -21,14 +19,13 @@ import moduleThreePageOne from "./module_3/page_one.md?raw";
 // Module Four Imports
 import moduleFourPageOne from "./module_4/page_one.md?raw";
 
-// Module Five Imports 
+
+// Module five Imports
 import moduleFivePageOne from "./module_5/page_one.md?raw";
 
-// Module Six Imports
-import moduleSixPageOne from "./module_6/page_one.md?raw";
-
 // Module Seven Imports
-import moduleSevenPageOne from "./module_7/page_one.md?raw"
+import moduleSixPageOne from "./module_6/page_one.md?raw"
+
 
 
 const moduleOneId = nav[0].id;
@@ -37,7 +34,6 @@ const moduleThreeId = nav[2].id;
 const moduleFourId = nav[3].id;
 const moduleFiveId = nav[4].id;
 const moduleSixId = nav[5].id;
-const moduleSevenId = nav[6].id;
 
 
 export const chapters = [
@@ -63,24 +59,27 @@ export const chapters = [
   },
   {
     id: moduleTwoId + "-page-1",
-    title: 'Variables, Outputs, AWS Auth, and Terraform State',
+    title: 'IAM Basics and Permissions',
     sectionId: moduleTwoId,
     previousChapterId: null,
-    content: moduleTwoPageOne,
-    exercise: null
+    content: IamPageOne,
+    quiz: {
+      component: () => <>
+        <h1>Checkpoint</h1>
+        <Checkpoint questions={Iamquestions} />
+      </>
+    }
   },
   {
     id: moduleTwoId + "-page-2",
-    title: 'Variables, Outputs, AWS Auth, and Terraform State Continued',
+    title: 'IAM Best Practices',
     sectionId: moduleTwoId,
     previousChapterId: moduleTwoId + "-page-1",
-    content: moduleTwoPageTwo,
-    exercise: {
-      starterCode: excerciseTwo,
-      solution: solutionTwo,
-      tests: t2
-    },
+    content: IamPageTwo,
+    exercise: null,
   },
+
+  
   {
     id: moduleThreeId + "-page-1",
     title: 'Understanding the Terraform Architecture (EC2, S3, CloudFront, RDS',
@@ -99,7 +98,7 @@ export const chapters = [
   },
   {
     id: moduleFiveId + "-page-1",
-    title: 'IAM Basics and Permissions',
+    title: 'Load Balancing Fundamentals',
     sectionId: moduleFiveId,
     previousChapterId: null,
     content: moduleFivePageOne,
@@ -107,18 +106,10 @@ export const chapters = [
   },
   {
     id: moduleSixId + "-page-1",
-    title: 'Load Balancing Fundamentals',
+    title: 'Event-Driven Architecture Concepts and Lambda Fundamentals',
     sectionId: moduleSixId,
     previousChapterId: null,
     content: moduleSixPageOne,
-    exercise: null,
-  },
-  {
-    id: moduleSevenId + "-page-1",
-    title: 'Event-Driven Architecture Concepts and Lambda Fundamentals',
-    sectionId: moduleSevenId,
-    previousChapterId: null,
-    content: moduleSevenPageOne,
     exercise: null,
   },
 ]
