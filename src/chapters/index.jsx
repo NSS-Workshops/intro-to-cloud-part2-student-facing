@@ -13,6 +13,7 @@ import {questions as questions} from "./Terraform/questions_1.jsx";
 // IAM Chapters 
 import IamPageOne from "./IAM/page_one.md?raw";
 import IamPageTwo from "./IAM/page_two.md?raw";
+import IamPageThree from "./IAM/page_three.md?raw";
 import { Iamquestions as Iamquestions } from './IAM/questions_1.jsx';
 
 // Module Three Imports
@@ -93,8 +94,14 @@ export const chapters = [
     content: IamPageTwo,
     exercise: null,
   },
-
-  
+  {
+    id: moduleTwoId + "-page-3",
+    title: 'IAM in Terraform',
+    sectionId: moduleTwoId,
+    previousChapterId: moduleTwoId + "-page-2",
+    content: IamPageThree,
+    exercise: null,
+  },
   {
     id: moduleThreeId + "-page-1",
     title: 'Understanding the Terraform Architecture (EC2, S3, CloudFront, RDS',
