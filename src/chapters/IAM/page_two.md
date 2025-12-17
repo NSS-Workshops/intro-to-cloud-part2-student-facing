@@ -1,11 +1,12 @@
 ## IAM: Best Practices
 --------------------
+Following IAM best practices is essential for protecting your AWS infrastructure from breaches, unauthorized access, and costly security incidents. These six foundational practices will help you build a secure cloud environment by controlling who can access what, and under what conditions.
 
 **1. Implement Least Privilege:**
 Remember: implement least privilege from day one and follow these guidelines as you build.
 
 - Start with zero permissions - Begin with no access and add specific permissions as needed
-- Be specific with actions - Use `s3:GetObjec`1 instead of `s3:*`
+- Be specific with actions - Use `s3:GetObject` instead of `s3:*`
 - Be specific with resources - Use exact ARNs instead of `"Resource": "*"`
 - Use conditions - Add IP restrictions, time-based access, MFA requirements, or tag-based conditions
 - Review regularly - Audit what permissions are actually being used and remove unnecessary ones
@@ -31,20 +32,7 @@ Hardcoded access keys in applications don't expire, get committed to Git, and cr
 - Create an IAM role with the necessary permissions
 - Attach the role to your EC2 instance, Lambda function, or other service
 - The service automatically receives temporary credentials that rotate automatically
-- Your application uses the AWS SDK (Amazon Web Services Software Development Kit), which automatically discovers and uses these credentials
 
-***Example 1:*** Bad Practice: Hardcoded Access Keys.
-``` js 
-AWS.config.update({
-  accessKeyId: "AKIA...",
-  secretAccessKey: "abcd..."
-});
-```
-***Example 2:*** Best Practice: IAM Role with SDK.
-``` js 
-const s3 = new AWS.S3();
-// The SDK automatically uses the IAM role credentials
-```
 
 **4. Enable MFA for Privileged Users:**
 What is MFA?

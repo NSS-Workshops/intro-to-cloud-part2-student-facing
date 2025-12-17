@@ -77,7 +77,7 @@ IAM is the security foundation of cloud infrastructure. It answers three fundame
 
 What is The Principle of Least Privilege? This is the cornerstone of IAM security: Grant only the permissions required to perform a task, nothing more.
 
-Always start with a minimum set of permissions and grant additional permissions as necessary. Doing so is more secure than starting with permissions that are too lenient and then trying to tighten them later. It is best pratice to follow The Principle of Least Privilege from the very beginning, as soon as you start building! 
+Always start with a minimum set of permissions and grant additional permissions as necessary. Doing so is more secure than starting with permissions that are too lenient and then trying to tighten them later. It is best practice to follow The Principle of Least Privilege from the very beginning, as soon as you start building! 
 
 
 ***Why it matters:***
