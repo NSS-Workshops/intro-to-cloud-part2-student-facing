@@ -1,9 +1,8 @@
-# Page 8: Load Balancing Fundamentals
+# Page 9: Event-Driven Architecture Concepts and Lambda Fundamentals
 
 ## Session Goals
-
-- Introduce scalability, elasticity, and fault-tolerant architectures
-- Demonstrate how load balancing works with EC2 before ECS automates it in later workshops
-- Reinforce architectural thinking with diagrams and resource relationships
-- Show how LLMs can help reason about architecture, simplify complex diagrams, and debug
-Terraform configurations
+- Introduce event-driven and serverless systems in AWS
+- Explain Lambda fundamentals and execution model
+- Demonstrate a simple Lambda function deployment as a conceptual bridge to Workshop 3
+- Provide hands-on exposure to Terraform-managed Lambda functions and execution roles
+- Encourage students to visualize event flows through diagrams

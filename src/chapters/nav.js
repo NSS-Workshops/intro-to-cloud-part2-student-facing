@@ -7,8 +7,8 @@ export const nav = [
   },
   {
     id: "module-2",
-    title: "Add structure to Terraform configurations & Explore Terraform state and why it matters.",
-    description:"Deploy a Dockerized API to ECS using Terraform",
+    title: "IAM Basics and Permissions",
+    description: "Introduce IAM as the foundation of AWS security & Teach students how to read, reason about, and debug IAM policies.",
     required: true,
   },
   {
@@ -25,18 +25,12 @@ export const nav = [
   },
   {
     id: "module-5",
-    title: "IAM Basics and Permissions",
-    description: "Introduce IAM as the foundation of AWS security & Teach students how to read, reason about, and debug IAM policies.",
-    required: true,
-  },
-  {
-    id: "module-6",
     title: "Load Balancing Fundamentals",
     description: "Introduce scalability, elasticity, and fault-tolerant architectures & Reinforce architectural thinking with diagrams and resource relationships.",
     required: true,
   },
   {
-    id: "module-7",
+    id: "module-6",
     title: "Event-Driven Architecture Concepts and Lambda Fundamentals",
     description: "Introduce event-driven and serverless systems in AWS, Demonstrate a simple Lambda function deployment as a conceptual bridge to Workshop 3.",
     required: true,
