@@ -1,8 +1,9 @@
-# Page 6: Networking Basics and Security Groups
+# Page 5: Understanding the Terraform Architecture (EC2, S3, CloudFront, RDS)
+
 
 ## Session Goals
 
-- Introduce foundational AWS networking concepts for application deployment
-- Explain how network boundaries, communication rules, and traffic flow work in AWS
-- Teach how Security Groups control access between services
-- Prepare students for later Terraform sessions involving networking and Security Group configuration
+- Walk through a pre-built Terraform project that recreates the Workshop 1 application stack
+- Understand how multiple AWS services are defined and connected in Terraform
+- Interpret variables, outputs, and resource dependencies in a real application
+- Build a mental model of how Terraform represents full architectures

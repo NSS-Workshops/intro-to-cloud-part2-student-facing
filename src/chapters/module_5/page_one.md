@@ -1,9 +1,8 @@
-# Page 8: Load Balancing Fundamentals
+# Page 6: Networking Basics and Security Groups
 
 ## Session Goals
 
-- Introduce scalability, elasticity, and fault-tolerant architectures
-- Demonstrate how load balancing works with EC2 before ECS automates it in later workshops
-- Reinforce architectural thinking with diagrams and resource relationships
-- Show how LLMs can help reason about architecture, simplify complex diagrams, and debug
-Terraform configurations
+- Introduce foundational AWS networking concepts for application deployment
+- Explain how network boundaries, communication rules, and traffic flow work in AWS
+- Teach how Security Groups control access between services
+- Prepare students for later Terraform sessions involving networking and Security Group configuration
