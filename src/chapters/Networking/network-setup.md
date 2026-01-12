@@ -83,7 +83,7 @@ resource "aws_db_subnet_group" "rock_of_ages" {
 
 ```
 
-## What's Happening Here?
+💡 **What's happening here?**
 
 Let's break down the Terraform code block by block to understand what each section does.
 

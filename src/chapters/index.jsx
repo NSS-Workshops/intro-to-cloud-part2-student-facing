@@ -16,14 +16,16 @@ import IamPageTwo from "./IAM/page_two.md?raw";
 import IamPageThree from "./IAM/page_three.md?raw";
 import { Iamquestions as Iamquestions } from './IAM/questions_1.jsx';
 
-// Module Three Imports
-import moduleThreePageOne from "./module_3/page_one.md?raw";
-
 // Networking Chapters
 import NetworkingPageOne from "./Networking/networking-intro.md?raw";
 import NetworkingPageTwo from "./Networking/diagramming.md?raw";
 import NetworkingPageThree from "./Networking/network-setup.md?raw";
 import {questions as networkQuestions} from "./Networking/networking-questions.jsx";
+
+// EC2 RDS Terraform Chapters
+import moduleThreePageOne from "./RDS_EC2/ec2.md?raw";
+import moduleThreePageTwo from "./RDS_EC2/rds.md?raw";
+import moduleThreePageThree from "./RDS_EC2/deploy.md?raw";
 
 
 
@@ -108,16 +110,8 @@ export const chapters = [
   },
   {
     id: moduleThreeId + "-page-1",
-    title: 'Understanding the Terraform Architecture (EC2, S3, CloudFront, RDS',
-    sectionId: moduleThreeId,
-    previousChapterId: null,
-    content: moduleThreePageOne,
-    exercise: null,
-  },
-  {
-    id: moduleFourId + "-page-1",
     title: 'Networking Basics and Security Groups',
-    sectionId: moduleFourId,
+    sectionId: moduleThreeId,
     previousChapterId: null,
     content: NetworkingPageOne,
     exercise: null,
@@ -128,19 +122,43 @@ export const chapters = [
     }
   },
   {
-    id: moduleFourId + "-page-2",
+    id: moduleThreeId + "-page-2",
     title: 'Understanding Networking Diagrams',
-    sectionId: moduleFourId,
-    previousChapterId: moduleFourId + "-page-1",
+    sectionId: moduleThreeId,
+    previousChapterId: moduleThreeId + "-page-1",
     content: NetworkingPageTwo,
     exercise: null,
   },
   {
-    id: moduleFourId + "-page-3",
+    id: moduleThreeId + "-page-3",
     title: 'Networking in Terraform',
+    sectionId: moduleThreeId,
+    previousChapterId: moduleThreeId + "-page-2",
+    content: NetworkingPageThree,
+    exercise: null,
+  },
+  {
+    id: moduleFourId + "-page-1",
+    title: 'EC2 in Terraform',
+    sectionId: moduleFourId,
+    previousChapterId: null,
+    content: moduleThreePageOne,
+    exercise: null,
+  },
+  {
+    id: moduleFourId + "-page-2",
+    title: 'RDS in Terraform',
+    sectionId: moduleFourId,
+    previousChapterId: moduleFourId + "-page-1",
+    content: moduleThreePageTwo,
+    exercise: null,
+  },
+  {
+    id: moduleFourId + "-page-3",
+    title: 'Deploy the Rock-of-Ages Application',
     sectionId: moduleFourId,
     previousChapterId: moduleFourId + "-page-2",
-    content: NetworkingPageThree,
+    content: moduleThreePageThree,
     exercise: null,
   },
   {

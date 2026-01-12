@@ -13,14 +13,14 @@ export const nav = [
   },
   {
     id: "module-3",
-    title: "Understanding the Terraform Architecture (EC2, S3, CloudFront, RDS)",
-    description: "Walk through a pre-built Terraform project that recreates the Workshop 1 application stack.",
-    required: true,
-  },
-  {
-    id: "module-4",
     title: "Networking",
     description: "Introduce foundational AWS networking concepts for application deployment & Teach how Security Groups control access between services.",
+    required: true,
+  },
+   {
+    id: "module-4",
+    title: "EC2 and RDS in Terraform",
+    description: "Complete the full stack infrastructure setup with EC2 and RDS Terraform configurations",
     required: true,
   },
   {
