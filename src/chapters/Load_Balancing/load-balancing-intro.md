@@ -1,4 +1,3 @@
-# Module 5: Load Balancing Introduction
 
 ## What is Load Balancing?
 
