@@ -28,14 +28,14 @@ import NetworkingPageThree from "./Networking/network-setup.md?raw";
 import {questions as networkQuestions} from "./Networking/networking-questions.jsx";
 
 // EC2 RDS Terraform Chapters
-import moduleThreePageOne from "./RDS_EC2/ec2.md?raw";
-import moduleThreePageTwo from "./RDS_EC2/rds.md?raw";
-import moduleThreePageThree from "./RDS_EC2/deploy.md?raw";
+import EC2RDSPageOne from "./RDS_EC2/ec2.md?raw";
+import EC2RDSPageTwo from "./RDS_EC2/rds.md?raw";
+import EC2RDSPageThree from "./RDS_EC2/deploy.md?raw";
 
-
-
-// Module five Imports
-import moduleFivePageOne from "./module_5/page_one.md?raw";
+// Load Balancing Chapters
+import LoadBalancingPageOne from "./Load_Balancing/load-balancing-intro.md?raw"
+import LoadBalancingPageTwo from "./Load_Balancing/load-balancing-setup.md?raw"
+import LoadBalancingPageThree from "./Load_Balancing/api-updates.md?raw"
 
 // Module Seven Imports
 import moduleSixPageOne from "./module_6/page_one.md?raw"
@@ -154,7 +154,7 @@ export const chapters = [
     title: 'EC2 in Terraform',
     sectionId: moduleFiveId,
     previousChapterId: null,
-    content: moduleThreePageOne,
+    content: EC2RDSPageOne,
     exercise: null,
   },
   {
@@ -162,7 +162,7 @@ export const chapters = [
     title: 'RDS in Terraform',
     sectionId: moduleFiveId,
     previousChapterId: moduleFiveId + "-page-1",
-    content: moduleThreePageTwo,
+    content: EC2RDSPageTwo,
     exercise: null,
   },
   {
@@ -170,15 +170,31 @@ export const chapters = [
     title: 'Deploy the Rock-of-Ages Application',
     sectionId: moduleFiveId,
     previousChapterId: moduleFiveId + "-page-2",
-    content: moduleThreePageThree,
+    content: EC2RDSPageThree,
     exercise: null,
   },
   {
     id: moduleSixId + "-page-1",
-    title: 'Load Balancing Fundamentals',
+    title: 'Intro to Load Balancing',
     sectionId: moduleSixId,
     previousChapterId: null,
-    content: moduleFivePageOne,
+    content: LoadBalancingPageOne,
+    exercise: null,
+  },
+  {
+    id: moduleSixId + "-page-2",
+    title: 'Load Balancing in Terraform',
+    sectionId: moduleSixId,
+    previousChapterId: moduleSixId + "-page-1",
+    content: LoadBalancingPageTwo,
+    exercise: null,
+  },
+  {
+    id: moduleSixId + "-page-3",
+    title: 'API Updates and Deployment',
+    sectionId: moduleSixId,
+    previousChapterId: moduleSixId + "-page-2",
+    content: LoadBalancingPageThree,
     exercise: null,
   },
   {
