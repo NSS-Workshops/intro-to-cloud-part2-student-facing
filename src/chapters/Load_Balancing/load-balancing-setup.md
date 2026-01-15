@@ -153,12 +153,12 @@ resource "aws_lb_listener" "http_listener" {
 }
 
 ```
-** What has changed? ** 
+**What has changed?** 
 
-- ** Application Load Balancer **: The resource "aws_lb" "application_load_balancer" is the load balancer itself. It also uses the default subnets and will be open to internet traffic (hence internal = false). There are different types of load balancers such as network load balancers which we won't get into in this course. Application load balancers are used in our case because they understand HTTP traffic and are aware of health check endpoints. 
-- ** ALB Listener **: The resource "aws_lb_listener" "http_listener" creates an HTTP listener on the Application Load Balancer that accepts incoming traffic on port 80. Every request that reaches the ALB is forwarded to the api_tg target group, which then routes it to one of the healthy EC2 instances.
-- ** ALB Security Group **: Remember security groups are rules that determine which internet traffic is allowed in your services. The resource "aws_security_group" "alb_sg" configuration allows all HTTP internet traffic into your Application Load Balancer. 
-- ** Target Group **: The resource "aws_lb_target_group" "api_tg" tells the Application Load Balancer which EC2 instances are allowed to receive traffic and how to decide if they’re healthy. The ALB will send HTTP requests to port 80 on each registered EC2 and repeatedly call /health/; only instances that return HTTP 200 twice in a row are considered healthy and will receive user traffic.
+- **Application Load Balancer**: The resource "aws_lb" "application_load_balancer" is the load balancer itself. It also uses the default subnets and will be open to internet traffic (hence internal = false). There are different types of load balancers such as network load balancers which we won't get into in this course. Application load balancers are used in our case because they understand HTTP traffic and are aware of health check endpoints. 
+- **ALB Listener**: The resource "aws_lb_listener" "http_listener" creates an HTTP listener on the Application Load Balancer that accepts incoming traffic on port 80. Every request that reaches the ALB is forwarded to the api_tg target group, which then routes it to one of the healthy EC2 instances.
+- **ALB Security Group**: Remember security groups are rules that determine which internet traffic is allowed in your services. The resource "aws_security_group" "alb_sg" configuration allows all HTTP internet traffic into your Application Load Balancer. 
+- **Target Group**: The resource "aws_lb_target_group" "api_tg" tells the Application Load Balancer which EC2 instances are allowed to receive traffic and how to decide if they’re healthy. The ALB will send HTTP requests to port 80 on each registered EC2 and repeatedly call /health/; only instances that return HTTP 200 twice in a row are considered healthy and will receive user traffic.
 - Additionally we have updated the ingress rules on our ec2 security group to only allow traffic from the ALB security group. Previously we were allowing traffic from anywhere on the internet. Look at this block:
 
 ```
@@ -224,7 +224,7 @@ data "aws_ami" "amazon_linux_2023" {
 }
 ```
 
-** What has changed? ** 
+**What has changed?** 
 - We've added count = 2 in our ec2 configuration to indicate we want to create 2 ec2 instances
 - The ec2 instances are are attached to our ALB target group with the resource "aws_lb_target_group_attachment" "api" configuration. Without this, the target group would not know which ec2 instances to route traffic to
 - There is also a small addition to the tags we've created for our ec2 instances. Role = "rock-of-ages-api" has been added to the tags. This will make it easier later when we update our CICD github actions file in the api codebase because we can target the ec2 instances based on the tag rather than the instance ids. This removes the need to configure instance ids in our repository secrets. 
