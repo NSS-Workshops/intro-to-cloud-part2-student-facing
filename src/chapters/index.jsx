@@ -175,7 +175,7 @@ export const chapters = [
   },
   {
     id: moduleSixId + "-page-1",
-    title: 'Load Balancing Fundamentals',
+    title: 'Intro to Load Balancing',
     sectionId: moduleSixId,
     previousChapterId: null,
     content: LoadBalancingPageOne,
@@ -183,7 +183,7 @@ export const chapters = [
   },
   {
     id: moduleSixId + "-page-2",
-    title: 'Load Balancing Fundamentals',
+    title: 'Load Balancing in Terraform',
     sectionId: moduleSixId,
     previousChapterId: moduleSixId + "-page-1",
     content: LoadBalancingPageTwo,
@@ -191,7 +191,7 @@ export const chapters = [
   },
   {
     id: moduleSixId + "-page-3",
-    title: 'Load Balancing Fundamentals',
+    title: 'API Updates and Deployment',
     sectionId: moduleSixId,
     previousChapterId: moduleSixId + "-page-2",
     content: LoadBalancingPageThree,
