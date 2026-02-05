@@ -34,7 +34,7 @@ output "db_host" {
 
 output "db_name" {
   description = "database name"
-  value       = aws_db_instance.rock_of_ages.name
+  value       = aws_db_instance.rock_of_ages.username
 }
 
 output "db_user" {

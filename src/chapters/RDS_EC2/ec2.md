@@ -26,7 +26,7 @@ In your Terraform project, create a file called ec2.tf and paste the following:
 data "aws_caller_identity" "current" {}
 
 resource "aws_instance" "api_server" {
-  ami                    = aws_ami.amazon_linux_2023.id
+  ami                    = data.aws_ami.amazon_linux_2023.id
   instance_type          = "t2.micro"
   iam_instance_profile   = aws_iam_instance_profile.ec2_access_instance_profile.name
 
@@ -57,7 +57,13 @@ data "aws_ami" "amazon_linux_2023" {
     name   = "name"
     values = ["al2023-ami-2023*kernel-6.1*"]
   }
+
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
 }
+
 
 ```
 
@@ -88,7 +94,7 @@ Together, these blocks set up a basic, publicly accessible EC2 instance running 
 
 Create another file called user_data.sh and paste the following:
 
-```
+```bash
 #!/bin/bash
 yum update -y
 
@@ -98,9 +104,7 @@ service docker start
 usermod -a -G docker ec2-user
 
 # Reconnect permissions later
-newgrp docker <<EOF
-
-EOF
+newgrp docker 
 ```
 
 💡 **What's happening here?**
@@ -109,7 +113,7 @@ Remember installing docker on the ec2 instance during the first workshop?
 
 [Workshop One EC2 Setup](https://nss-workshops.github.io/intro-to-cloud-student-facing/ec2-setup)
 
-This bash script is referenced by your terraform config and runs the same commands to install docker your ec2 instance. 
+This bash script is referenced by your terraform config and runs the same commands to install docker on your ec2 instance. 
 
 ## What is an AMI?
 
