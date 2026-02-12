@@ -37,8 +37,9 @@ import LoadBalancingPageOne from "./Load_Balancing/load-balancing-intro.md?raw"
 import LoadBalancingPageTwo from "./Load_Balancing/load-balancing-setup.md?raw"
 import LoadBalancingPageThree from "./Load_Balancing/api-updates.md?raw"
 
-// Module Seven Imports
-import moduleSixPageOne from "./module_6/page_one.md?raw"
+// Lambda Imports
+import LambdaPageOne from "./Lambda/lambda-intro.md?raw"
+import LambdaPageTwo from "./Lambda/lambda-setup.md?raw"
 
 
 const moduleOneId = nav[0].id;
@@ -199,10 +200,18 @@ export const chapters = [
   },
   {
     id: moduleSevenId + "-page-1",
-    title: 'Event-Driven Architecture Concepts and Lambda Fundamentals',
+    title: 'Introduction to AWS Lambda: Serverless and Event-Driven',
     sectionId: moduleSevenId,
     previousChapterId: null,
-    content: moduleSixPageOne,
+    content: LambdaPageOne,
+    exercise: null,
+  },
+  {
+    id: moduleSevenId + "-page-2",
+    title: 'Hello Lambda!',
+    sectionId: moduleSevenId,
+    previousChapterId: moduleSevenId + "-page-1",
+    content: LambdaPageTwo,
     exercise: null,
   },
 ]
