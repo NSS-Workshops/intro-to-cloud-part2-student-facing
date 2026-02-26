@@ -1,0 +1,10 @@
+This glossary contains important terms and concepts discussed in Event-Driven Architecture Concepts and Lambda Fundamentals. Understanding them will help solidify and deepen your understanding.
+
+| Term | Definition |
+|------|------------|
+| Event | Essentially a change in state or an update. It's a signal that something has happened, and it can originate from various AWS services or custom applications. Think of it as a notification that triggers a reaction.
+| Producer  | An S3 bucket generating an "object uploaded" event. [ex. Imagine you're at a restaurant, and you place an order with the waiter. You are the producer of the "order event." You generate the event (your order) and hand it off.]
+| Consumer | A Lambda function configured to process that S3 event. [ex. The kitchen staff receives your order. They don't care who placed the order, only what the order is. They are the consumers of the "order event," and they process it by preparing your meal.]
+| Synchronous (Request/Response) | An API Gateway directly invoking a Lambda function and waiting for a response is a synchronous interaction. The client waits for the Lambda to execute and return a result. [USE CASE: Real-time user interfaces, immediate data validation, scenarios where the client needs an immediate response.]
+| Asynchronous (Event-Driven) | An S3 upload triggering a Lambda function. The upload completes, and the user doesn't wait for the Lambda to finish processing the file. The Lambda runs in the background. SQS queues are also a prime example, where messages are put into a queue, and consumers process them independently. [USE CASE: Background processing, long-running tasks, decoupling services, handling high-volume data streams, resilience.]
+| AWS Lambda function | A piece of code that runs in response to events. It's a "serverless" compute service, meaning AWS fully manages the underlying servers for you. You just provide your code, and Lambda takes care of everything required to run it, scale it, and ensure high availability.
