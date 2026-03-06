@@ -11,35 +11,41 @@ import LlmToolingSetup from "./Introduction/llm-tooling-setup.md?raw";
 // Terraform Chapters
 import TerraformPageOne from "./Terraform/terraform-fundamentals.md?raw";
 import TerraformPageTwo from "./Terraform/terraform-setup.md?raw";
-import TerraformPageThree from "./Terraform/terraform-expanded.md?raw"
-import TerraformPageFour from "./Terraform/client-side-setup.md?raw"
+import TerraformPageThree from "./Terraform/terraform-expanded.md?raw";
+import TerraformPageFour from "./Terraform/client-side-setup.md?raw";
+import TerraformPageFive from "./Terraform/glossary-terms.md?raw";
 import {questions as questions} from "./Terraform/questions_1.jsx";
 
 // IAM Chapters 
 import IamPageOne from "./IAM/page_one.md?raw";
 import IamPageTwo from "./IAM/page_two.md?raw";
 import IamPageThree from "./IAM/page_three.md?raw";
+import IamPageFour from "./IAM/glossary-terms.md?raw";
 import { Iamquestions as Iamquestions } from './IAM/questions_1.jsx';
 
 // Networking Chapters
 import NetworkingPageOne from "./Networking/networking-intro.md?raw";
 import NetworkingPageTwo from "./Networking/diagramming.md?raw";
 import NetworkingPageThree from "./Networking/network-setup.md?raw";
+import NetworkingPageFour from "./Networking/glossary-terms.md?raw";
 import {questions as networkQuestions} from "./Networking/networking-questions.jsx";
 
 // EC2 RDS Terraform Chapters
 import EC2RDSPageOne from "./RDS_EC2/ec2.md?raw";
 import EC2RDSPageTwo from "./RDS_EC2/rds.md?raw";
 import EC2RDSPageThree from "./RDS_EC2/deploy.md?raw";
+import EC2RDSPageFour from "./RDS_EC2/glossary-terms.md?raw";
 
 // Load Balancing Chapters
-import LoadBalancingPageOne from "./Load_Balancing/load-balancing-intro.md?raw"
-import LoadBalancingPageTwo from "./Load_Balancing/load-balancing-setup.md?raw"
-import LoadBalancingPageThree from "./Load_Balancing/api-updates.md?raw"
+import LoadBalancingPageOne from "./Load_Balancing/load-balancing-intro.md?raw";
+import LoadBalancingPageTwo from "./Load_Balancing/load-balancing-setup.md?raw";
+import LoadBalancingPageThree from "./Load_Balancing/api-updates.md?raw";
+import LoadBalancingPageFour from "./Load_Balancing/glossary-terms.md?raw";
 
 // Lambda Imports
-import LambdaPageOne from "./Lambda/lambda-intro.md?raw"
-import LambdaPageTwo from "./Lambda/lambda-setup.md?raw"
+import LambdaPageOne from "./Lambda/lambda-intro.md?raw";
+import LambdaPageTwo from "./Lambda/lambda-setup.md?raw";
+import LambdaPageThree from "./Lambda/glossary-terms.md?raw";
 
 
 const moduleOneId = nav[0].id;
@@ -93,6 +99,13 @@ export const chapters = [
     content: TerraformPageFour
   },
   {
+    id: moduleTwoId + "-page-5",
+    title: 'Glossary',
+    sectionId: moduleTwoId,
+    previousChapterId: moduleTwoId + "-page-4",
+    content: TerraformPageFive,
+  },
+  {
     id: moduleThreeId + "-page-1",
     title: 'IAM Basics and Permissions',
     sectionId: moduleThreeId,
@@ -120,6 +133,13 @@ export const chapters = [
     previousChapterId: moduleThreeId + "-page-2",
     content: IamPageThree,
     exercise: null,
+  },
+  {
+    id: moduleThreeId + "-page-4",
+    title: 'Glossary',
+    sectionId: moduleThreeId,
+    previousChapterId: moduleThreeId + "-page-3",
+    content: IamPageFour,
   },
   {
     id: moduleFourId + "-page-1",
@@ -151,6 +171,13 @@ export const chapters = [
     exercise: null,
   },
   {
+    id: moduleFourId + "-page-4",
+    title: 'Glossary',
+    sectionId: moduleFourId,
+    previousChapterId: moduleFourId + "-page-3",
+    content: NetworkingPageFour,
+  },
+  {
     id: moduleFiveId + "-page-1",
     title: 'EC2 in Terraform',
     sectionId: moduleFiveId,
@@ -173,6 +200,13 @@ export const chapters = [
     previousChapterId: moduleFiveId + "-page-2",
     content: EC2RDSPageThree,
     exercise: null,
+  },
+  {
+    id: moduleFiveId + "-page-4",
+    title: 'Glossary',
+    sectionId: moduleFiveId,
+    previousChapterId: moduleFiveId + "-page-3",
+    content: EC2RDSPageFour,
   },
   {
     id: moduleSixId + "-page-1",
@@ -199,6 +233,13 @@ export const chapters = [
     exercise: null,
   },
   {
+    id: moduleSixId + "-page-4",
+    title: 'Glossary',
+    sectionId: moduleSixId,
+    previousChapterId: moduleSixId + "-page-3",
+    content: LoadBalancingPageFour,
+  },
+  {
     id: moduleSevenId + "-page-1",
     title: 'Introduction to AWS Lambda: Serverless and Event-Driven',
     sectionId: moduleSevenId,
@@ -213,5 +254,12 @@ export const chapters = [
     previousChapterId: moduleSevenId + "-page-1",
     content: LambdaPageTwo,
     exercise: null,
+  },
+  {
+    id: moduleSevenId + "-page-3",
+    title: 'Glossary',
+    sectionId: moduleSevenId,
+    previousChapterId: moduleSevenId + "-page-2",
+    content: LambdaPageThree,
   },
 ]
