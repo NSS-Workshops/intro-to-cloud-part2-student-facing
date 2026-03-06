@@ -1,7 +1,7 @@
 Now that the load balancing infrastructure is in place there are a few changes we need to make to our api before deploying to the new ec2 instances.
 
 ## Add Health Check Endpoints
-In your rock-of-ages api project, in the rockapi/views add a file called health_check.py and paste the following:
+1. In your rock-of-ages api project, in the rockapi/views add a file called health_check.py and paste the following:
 
 ```python
 from django.http import JsonResponse
@@ -32,7 +32,10 @@ def get_instance_id():
         return "unknown"
 ```
 
-Then in rockproject/urls.py add the health endpoint to `urlpatterns`. It should look like:
+2. In your Pipfile add `requests = "*"` to your packages.
+
+
+3. Then in rockproject/urls.py add the health endpoint to `urlpatterns`. It should look like:
 
 ```python
 urlpatterns = [
@@ -42,6 +45,11 @@ urlpatterns = [
     path('health', health_check),
     path('admin/', admin.site.urls),
 ]
+```
+Make sure to import health_check at the top of the file 
+
+```
+from rockapi.views.health_check import health_check
 ```
 
 💡 **What's happening here?** A health endpoint is a simple URL (like /health/) that returns a 200 response when an application is running correctly. The load balancer calls this endpoint on each server and only sends real user traffic to the ones that are responding as healthy.

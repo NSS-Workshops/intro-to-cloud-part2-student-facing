@@ -46,12 +46,12 @@ By now you should have your SSO configuration setup.
 
 Run 
 ```bash
-aws sso login --profile=intro-to-cloud-part2
+aws sso login --profile=intro_to_cloud_2
 ```
 
 Run:
 ```bash
-export AWS_PROFILE=intro_to_cloud_part2
+export AWS_PROFILE=intro_to_cloud_2
 ```
 
 ## Run Terraform Commands

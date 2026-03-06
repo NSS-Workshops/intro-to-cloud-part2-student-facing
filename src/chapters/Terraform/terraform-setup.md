@@ -41,15 +41,15 @@ Follow the prompts to set up your sso profile. You will need the values listed h
   - You can name the session anything e.g. `terraform-session`
   - If prompted for Sso registration scopes just press enter
   - The start url will be `https://nss-se.awsapps.com/start/` (This will redirect you to aws login in the browser. Login and and click allow access)
-  - Choose the `intro_to_cloud_part2` role.
+  - Choose the `intro_to_cloud_2` role.
   - Set the region to `us-east-2`.
   - The output format will be `json`.
-  - Name the profile after the role `intro_to_cloud_part2`.
+  - Name the profile after the role `intro_to_cloud_2`.
   - There should only be one account available to you, the cli should automatically use that account number.
 
 Run:
 ```bash
-export AWS_PROFILE=intro_to_cloud_part2
+export AWS_PROFILE=intro_to_cloud_2
 ```
 
 This tells your terminal session to point to your newly created credentials
