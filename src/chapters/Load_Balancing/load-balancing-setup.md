@@ -4,6 +4,8 @@ Now lets update our Terraform project to setup load balancing for your rock of a
 Replace your current network.tf file with:
 
 ```
+data "aws_caller_identity" "current" {}
+
 # Use the default VPC
 data "aws_vpc" "default" {
   default = true
@@ -228,6 +230,30 @@ data "aws_ami" "amazon_linux_2023" {
 - We've added count = 2 in our ec2 configuration to indicate we want to create 2 ec2 instances
 - The ec2 instances are are attached to our ALB target group with the resource "aws_lb_target_group_attachment" "api" configuration. Without this, the target group would not know which ec2 instances to route traffic to
 - There is also a small addition to the tags we've created for our ec2 instances. Role = "rock-of-ages-api" has been added to the tags. This will make it easier later when we update our CICD github actions file in the api codebase because we can target the ec2 instances based on the tag rather than the instance ids. This removes the need to configure instance ids in our repository secrets. 
+
+## Update outputs.tf
+
+1. Replace your `output "ec2_instance_id"` with:
+
+```
+output "ec2_instance_id" {
+  value = aws_instance.api_server[*].id
+}
+```
+
+2. Replace your `output "ec2_public_dns"` with:
+
+```
+output "alb_dns_name" {
+  value       = aws_lb.application_load_balancer.dns_name
+  description = "The DNS name of the Application Load Balancer"
+}
+
+```
+**What has changed?** 
+- We are now running two ec2 instances instead of one, therefore we have to change the ec2_instance_id output to fetch the ids for multiple instances.
+- To access our api we will not be hitting the ec2 instance directly anymore. Instead, Http traffic will first flow through the application load balancer. Therefore, we need the DNS for the load balancer instead of the ec2 instance. 
+
 
 ## Run Terraform Commands
 You know the drill!
