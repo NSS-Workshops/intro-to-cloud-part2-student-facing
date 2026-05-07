@@ -5,7 +5,8 @@ import { Checkpoint } from '@nss-workshops/nss-core';
 import {nav} from "./nav.js";
 
 // Introduction chapters
-import LlmToolingSetup from "./Introduction/llm-tooling-setup.md?raw";
+import Introduction from "./Introduction/intro-to-the-course.md?raw";
+import AccountSetup from "./Introduction/aws-account-setup.md?raw";
 
 
 // Terraform Chapters
@@ -63,7 +64,14 @@ export const chapters = [
     title: 'Introduction and Course Outline',
     sectionId: moduleOneId,
     previousChapterId: null,
-    content: LlmToolingSetup
+    content: Introduction
+  },
+  {
+    id: moduleOneId + "-page-2",
+    title: 'AWS Account Access',
+    sectionId: moduleOneId,
+    previousChapterId: moduleOneId + "-page-1",
+    content: AccountSetup
   },
   {
     id: moduleTwoId + "-page-1",
