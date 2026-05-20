@@ -64,14 +64,16 @@ export const chapters = [
     title: 'Introduction and Course Outline',
     sectionId: moduleOneId,
     previousChapterId: null,
-    content: Introduction
+    content: Introduction,
+    exercise: null,
   },
   {
     id: moduleOneId + "-page-2",
     title: 'AWS Account Access',
     sectionId: moduleOneId,
     previousChapterId: moduleOneId + "-page-1",
-    content: AccountSetup
+    content: AccountSetup,
+    exercise: null,
   },
   {
     id: moduleTwoId + "-page-1",
@@ -79,6 +81,7 @@ export const chapters = [
     sectionId: moduleTwoId,
     previousChapterId: null,
     content: TerraformPageOne,
+    exercise: null,
     quiz: {component: () => <>
        <h1>Checkpoint</h1>
        <Checkpoint questions={questions}/>
@@ -90,21 +93,24 @@ export const chapters = [
     title: 'My First Terraform Project',
     sectionId: moduleTwoId,
     previousChapterId:  moduleTwoId + "-page-1",
-    content: TerraformPageTwo
+    content: TerraformPageTwo,
+    exercise: null,
   },
     {
     id: moduleTwoId + "-page-3",
     title: 'Terraform Expanded',
     sectionId: moduleTwoId,
     previousChapterId: moduleTwoId + "-page-2",
-    content: TerraformPageThree
+    content: TerraformPageThree,
+    exercise: null,
   },
   {
     id: moduleTwoId + "-page-4",
     title: 'Rock of Ages Client Side Infrastructure Setup',
     sectionId: moduleTwoId,
     previousChapterId:  moduleTwoId + "-page-3",
-    content: TerraformPageFour
+    content: TerraformPageFour,
+    exercise: null,
   },
   {
     id: moduleTwoId + "-page-5",
@@ -119,6 +125,7 @@ export const chapters = [
     sectionId: moduleThreeId,
     previousChapterId: null,
     content: IamPageOne,
+    exercise: null,
     quiz: {
       component: () => <>
         <h1>Checkpoint</h1>
