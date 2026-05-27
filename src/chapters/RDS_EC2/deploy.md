@@ -34,12 +34,12 @@ output "db_host" {
 
 output "db_name" {
   description = "database name"
-  value       = aws_db_instance.rock_of_ages.username
+  value       = aws_db_instance.rock_of_ages.db_name
 }
 
 output "db_user" {
   description = "database username"
-  value       = aws_db_instance.rock_of_ages.db_username
+  value       = aws_db_instance.rock_of_ages.username
 }
 
 output "github_oidc_role_arn" {
